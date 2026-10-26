@@ -1,0 +1,36 @@
+name: User story
+description: Create a user story with testable acceptance criteria
+title: "USxx — "
+labels: ["user-story"]
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      description: "Как ..., я хочу ..., чтобы ..."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: "Use Given / When / Then (Дано / Когда / Тогда)."
+      value: |
+        - Дано:
+          Когда:
+          Тогда:
+        - Дано:
+          Когда:
+          Тогда:
+    validations:
+      required: true
+  - type: input
+    id: estimate
+    attributes:
+      label: Story Points
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies

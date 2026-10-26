@@ -1,0 +1,7 @@
+﻿metric,value,forecast_date
+stories_in_mvp,10,
+simulation_count,100000,
+mean_weeks,4.40,
+P50_weeks,4,2026-12-01
+P85_weeks,5,2026-12-08
+P95_weeks,6,2026-12-15

@@ -1,0 +1,23 @@
+{
+  "team_size": 2,
+  "hours_per_person_per_week": 8,
+  "focus_factor": 0.7,
+  "weeks_available": 8,
+  "start_date": "2026-11-03",
+  "lab3_target_date_assumption": "2026-12-28",
+  "story_point_hours_calibration": 2.3,
+  "release_capacity_story_points": 38,
+  "max_mvp_stories": 10,
+  "mandatory_story_ids": [
+    "US01",
+    "US03",
+    "US04",
+    "US06",
+    "US07",
+    "US08",
+    "US09",
+    "US13"
+  ],
+  "throughput_simulations": 100000,
+  "random_seed": 42
+}

@@ -1,0 +1,2 @@
+# Замените placeholders на реальные GitHub-логины участников до включения обязательного CODEOWNERS review.
+* @REPLACE_WITH_MEMBER_A @REPLACE_WITH_MEMBER_B
