@@ -1,0 +1,42 @@
+name: Library CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Library checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Set up PHP and install dependencies
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: pdo_pgsql
+          tools: phpcs:3, phpunit:11
+          coverage: none
+
+      - name: Check PHP syntax
+        run: find public src tests -name '*.php' -exec php -l '{}' +
+
+      - name: Check formatting
+        run: phpcs --standard=PSR12 --extensions=php public src tests
+
+      - name: Run unit tests
+        run: phpunit tests
+
+      - name: Build Docker image
+        run: docker build --tag electronic-library:ci .
