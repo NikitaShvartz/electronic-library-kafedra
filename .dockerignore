@@ -1,0 +1,6 @@
+**
+!Dockerfile
+!public/
+!public/**
+!src/
+!src/**
